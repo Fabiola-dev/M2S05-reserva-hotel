@@ -2,12 +2,8 @@ package Entidades;
 
 import Excecoes.ExcecaoDominio;
 
-import javax.swing.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.temporal.ChronoUnit;
-import java.time.temporal.Temporal;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -54,20 +50,6 @@ public class Reserva {
                 "\n Data de saida=" + dataSaida;
     }
 
-//    public void imprimirReservas() {
-//        ArrayList<Reserva> reservas = new ArrayList<>();
-//        if (reservas.size() == 0) System.out.println("Lista de reservas vazia.");
-//        else for (int i = 0; i < reservas.size(); i++) {
-//            Reserva reserva = (Reserva) reservas.get(i);
-//            System.out.println("\t" + i + ": " + "Reserva:\n " +
-//                    "\n Número do quarto: " + reserva.getNumeroQuarto() +
-//                    "\n Data de entrada: " + reserva.getDataEntrada() +
-//                    "\n Data de saida: " + reserva.getDataSaida() +
-//                    "\n Período de estadia: " );
-//        }
-//        System.out.println();
-//    }
-
     public void imprimirInfoReserva() throws ParseException {
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         System.out.println("Reserva:\n " +
@@ -76,6 +58,5 @@ public class Reserva {
                 "\n Data de saida: " + formato.format(dataSaida) +
                 "\n Período da estadia: " + qdadeDiasDeEstadia(dataSaida, dataEntrada) + " noites."
         );
-
     }
 }

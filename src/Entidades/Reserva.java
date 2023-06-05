@@ -2,6 +2,7 @@ package Entidades;
 
 import Excecoes.ExcecaoDominio;
 
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -31,7 +32,7 @@ public class Reserva {
     public void setDataEntrada(Date dataEntrada) {this.dataEntrada = dataEntrada;}
     public Date getDataSaida() {return dataSaida;}
     public void setDataSaida(Date dataSaida) {this.dataSaida = dataSaida;}
-
+  
 
     public static long qdadeDiasDeEstadia(Date dataSaida, Date dataEntrada) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
